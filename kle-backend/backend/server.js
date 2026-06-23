@@ -26,6 +26,9 @@ app.use('/',         authRoutes);     // POST /register   POST /login
 app.use('/products', productRoutes);  // GET /products    GET /products/:id  etc.
 app.use('/cart',     cartRoutes);     // GET /cart        POST /cart/add     DELETE /cart/remove
 app.use('/orders',   orderRoutes);    // POST /orders/place
+app.get('/', (req, res) => {
+    res.send('KLE Ecommerce Backend is Running 🚀');
+})
 
 // ── Start Server ──────────────────────────────────────────────────────────────
 const PORT = process.env.PORT || 8000;
